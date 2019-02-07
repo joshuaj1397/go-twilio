@@ -55,7 +55,7 @@ func SendMsg(accountCredentials interface{}, recipient, body string) int {
 	  msgDataReader := *strings.NewReader(msgData.Encode())
 
 	  req, _ := http.NewRequest("POST", urlStr, &msgDataReader)
-	  req.SetBasicAuth(accountSid, authToken)
+	  req.SetBasicAuth(credentials.accountSid, credentials.authToken)
 	  req.Header.Add("Accept", "application/json")
 	  req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 	  resp, _ := client.Do(req)

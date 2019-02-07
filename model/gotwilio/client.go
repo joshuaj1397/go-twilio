@@ -53,7 +53,6 @@ func SendMsg(accountCredentials interface{}, recipient, body string) int {
 	  msgData.Set("Body", body)
 	  msgDataReader := *strings.NewReader(msgData.Encode())
 
-		// Make the request
 	  req, _ := http.NewRequest("POST", urlStr, &msgDataReader)
 	  req.SetBasicAuth(accountSid, authToken)
 	  req.Header.Add("Accept", "application/json")

@@ -9,7 +9,8 @@ import (
   "fmt"
 )
 
-// Twilio account credentials
+// Twilio account credentials are set in environment variables:
+// TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, and TWILIO_PHONE_NUMBER
 type Credentials struct {
 	accountSid	string
 	authToken		string

@@ -69,4 +69,5 @@ func SendMsg(accountCredentials interface{}, recipient, body string) int {
 	  } else {
 	    fmt.Println(resp.Status);
 	  }
+		return resp.Status
 }
